@@ -1,6 +1,6 @@
 package com.niko.lesson_one_homework.task_two.initial_code;
 
-abstract class Car {
+/*abstract class Car {
     public Engine engine;
     private String color;
     private String name;
@@ -34,4 +34,4 @@ abstract class Car {
     public void setName(String name) {
         this.name = name;
     }
-}
+}*/
