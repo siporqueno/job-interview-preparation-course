@@ -1,11 +1,24 @@
 package com.niko.lesson_one_homework.task_three;
 
-public class Square extends Shape {
+public class Square implements Shape {
 
+    private final int SIZE;
 
-    public Square(int size) {
-        super(size);
-        this.name = "square";
+    private final String NAME;
+
+    public Square(int size, String name) {
+        this.SIZE = size;
+        this.NAME = name;
+    }
+
+    @Override
+    public int getSIZE() {
+        return SIZE;
+    }
+
+    @Override
+    public String getNAME() {
+        return NAME;
     }
 
     @Override

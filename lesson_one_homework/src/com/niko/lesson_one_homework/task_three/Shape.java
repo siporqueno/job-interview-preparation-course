@@ -1,17 +1,15 @@
 package com.niko.lesson_one_homework.task_three;
 
-public abstract class Shape {
+public interface Shape {
 
-    protected final int SIZE;
+    int getSIZE();
 
-    protected String name;
+    String getNAME();
 
-    public Shape(int size) {
-        this.SIZE = size;
-    }
+    double calculatePerimeter();
 
-    public abstract double calculatePerimeter();
+    double calculateArea();
 
-    public abstract double calculateArea();
+
 
 }

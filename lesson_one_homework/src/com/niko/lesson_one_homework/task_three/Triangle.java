@@ -1,10 +1,24 @@
 package com.niko.lesson_one_homework.task_three;
 
-public class Triangle extends Shape {
+public class Triangle implements Shape {
 
-    public Triangle(int size) {
-        super(size);
-        this.name = "triangle";
+    private final int SIZE;
+
+    private final String NAME;
+
+    public Triangle(int size, String name) {
+        this.SIZE = size;
+        this.NAME = name;
+    }
+
+    @Override
+    public int getSIZE() {
+        return SIZE;
+    }
+
+    @Override
+    public String getNAME() {
+        return NAME;
     }
 
     @Override

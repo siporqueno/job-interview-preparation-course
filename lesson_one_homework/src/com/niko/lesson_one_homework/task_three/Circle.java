@@ -1,10 +1,24 @@
 package com.niko.lesson_one_homework.task_three;
 
-public class Circle extends Shape {
+public class Circle implements Shape {
 
-    public Circle(int size) {
-        super(size);
-        this.name = "circle";
+    private final int SIZE;
+
+    private final String NAME;
+
+    public Circle(int size, String name) {
+        this.SIZE = size;
+        this.NAME = name;
+    }
+
+    @Override
+    public int getSIZE() {
+        return SIZE;
+    }
+
+    @Override
+    public String getNAME() {
+        return NAME;
     }
 
     @Override
