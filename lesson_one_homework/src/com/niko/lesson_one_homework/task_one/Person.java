@@ -5,7 +5,7 @@ public class Person {
 
     private final int age;
 
-    public Person(Builder builder) {
+    private Person(Builder builder) {
         this.firstName = builder.firstName;
         this.middleName = builder.middleName;
         this.lastName = builder.lastName;
