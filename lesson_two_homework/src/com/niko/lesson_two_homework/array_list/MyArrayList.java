@@ -41,22 +41,18 @@ public class MyArrayList<E> implements MyList<E> {
     @Override
     public void add(int index, E value) {
 
-        if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("Index out of the range");
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("No element with such index");
         }
 
         if (this.arr.length == size) {
             this.arr = Arrays.copyOf(this.arr, this.arr.length * 2);
         }
 
-        if (index == size) {
-            add(value);
-        } else {
-            for (int i = size; i > index; i--) {
-                this.arr[i] = this.arr[i - 1];
-                this.arr[index] = value;
-                size++;
-            }
+        for (int i = size; i > index; i--) {
+            this.arr[i] = this.arr[i - 1];
+            this.arr[index] = value;
+            size++;
         }
 
     }
