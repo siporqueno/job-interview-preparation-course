@@ -17,11 +17,17 @@ public class MyArrayList<E> implements MyList<E> {
 
     @Override
     public E get(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("No element with such index");
+        }
         return (E) this.arr[index];
     }
 
     @Override
     public E set(int index, E newValue) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("No element with such index");
+        }
         E currentValue = (E) this.arr[index];
         this.arr[index] = newValue;
         return currentValue;
