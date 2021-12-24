@@ -4,13 +4,13 @@ import com.niko.lesson_two_homework.MyList;
 
 import java.util.Objects;
 
-public class MyLinkedList<E> implements MyList<E> {
+public class MySinglyLinkedList<E> implements MyList<E> {
 
     private Link<E> first;
 
     private int size;
 
-    public MyLinkedList() {
+    public MySinglyLinkedList() {
         this.first = null;
         this.size = 0;
     }
@@ -39,6 +39,8 @@ public class MyLinkedList<E> implements MyList<E> {
     @Override
     public void add(E value) {
         getLastLink().next = new Link<E>(value);
+
+        size++;
     }
 
     @Override
@@ -59,6 +61,7 @@ public class MyLinkedList<E> implements MyList<E> {
         Link<E> newLink = new Link<E>(value);
         newLink.next = previousLink.next;
         previousLink.next = newLink;
+
         size++;
     }
 
@@ -78,6 +81,8 @@ public class MyLinkedList<E> implements MyList<E> {
 
         E valueOfLinkToBeRemoved = previousLink.next.getValue();
         previousLink.next = previousLink.next.next;
+
+        size--;
 
         return valueOfLinkToBeRemoved;
     }

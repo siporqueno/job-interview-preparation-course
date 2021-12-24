@@ -3,6 +3,7 @@ package com.niko.lesson_two_homework.linked_list;
 public class Link<E> {
     private E value;
 
+    Link<E> prev;
     Link<E> next;
 
     public Link(E value) {
