@@ -11,4 +11,5 @@ out
 *.iml
 *.ipr
 !/.idea/runConfigurations
+*/target/
 
