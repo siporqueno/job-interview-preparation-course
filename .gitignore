@@ -12,3 +12,7 @@ out
 *.ipr
 !/.idea/runConfigurations
 
+**/mvnw
+**/mvnw.cmd
+**/HELP.md
+
