@@ -13,3 +13,10 @@ out
 !/.idea/runConfigurations
 */target/
 
+**/mvnw
+**/mvnw.cmd
+**/HELP.md
+
+**/lesson_seven_homework/src/test
+**/.mvn
+
